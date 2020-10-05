@@ -1,0 +1,18 @@
+sudo: false
+language: go
+git:
+    depth: 1
+install: go get -v github.com/gohugoio/hugo
+script: hugo
+deploy:
+    provider: pages
+    skip_cleanup: true
+    github_token: $d7dbec2a03957481c315fe53826aa29b3a947ebf
+    on:
+        branch: main
+    local_dir: public
+    repo: RalstonLiu/RalstonLiu.github.io
+    fqdn: https://tech.yirenliu.cn/
+    target_branch: main
+    email: 961127473@qq.com
+    name: RalstonLiu
